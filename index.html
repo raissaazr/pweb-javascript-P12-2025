@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RASAJUNA - Recipe Collection</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <h1>RASAJUNA</h1>
+        <div class="navbar-right">
+            <span class="welcome-text">Welcome, <span id="userName">Guest</span></span>
+            <button class="logout-btn" onclick="logout()">LOGOUT</button>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Koleksi Resep</h2>
+            <p>Jelajahi kuliner dunia selain MBG</p>
+        </div>
+    </section>
+
+    <section class="search-filter">
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Search by name, ingredient, or tag...">
+        </div>
+        <div class="filter-section">
+            <select id="cuisineFilter" class="cuisine-filter">
+                <option value="">All Cuisines</option>
+            </select>
+            <span class="recipe-count" id="recipeCount"></span>
+        </div>
+    </section>
+
+    <div class="container">
+        <div id="loadingMessage" class="loading">Loading recipes...</div>
+        <div id="errorMessage" class="error" style="display: none;"></div>
+        <div class="recipes-grid" id="recipesGrid"></div>
+        <div class="show-more-container" id="showMoreContainer" style="display: none;">
+            <button class="show-more-btn" onclick="showMore()">Show More</button>
+        </div>
+    </div>
+
+    <div class="modal" id="recipeModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title" id="modalTitle"></h3>
+                <button class="close-btn" onclick="closeModal()">&times;</button>
+            </div>
+            <div class="modal-body" id="modalBody"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
