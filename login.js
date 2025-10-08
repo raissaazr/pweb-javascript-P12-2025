@@ -85,4 +85,5 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Fetch users when the page loads
     fetchUsers();
+
 });
